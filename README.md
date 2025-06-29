@@ -11,7 +11,7 @@ Once deployed, we will monitor the application using Prometheus, Blackbox Export
 I integrated Email notification script using Groovy to send alerts when the pipeline fails or succeeds. 
 ```
 
-![alt text](image.png)
+![alt text](image.png) 
 ---
 
 ### Project Structure.
