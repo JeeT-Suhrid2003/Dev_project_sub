@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/ougabriel/full-stack-blogging-app.git'
+                git branch: 'main', url: "https://github.com/JeeT-Suhrid2003/Dev_project_sub.git"
             }
         }
         stage('Compile') {
@@ -48,21 +48,21 @@ pipeline {
             steps {
                 script{
                 withDockerRegistry(credentialsId: 'dockerhub-cred', url: 'https://index.docker.io/v1/') {
-                sh "docker build -t ugogabriel/gab-blogging-app ."
+                sh "docker build -t suhrid/blogging-app ."
                 }
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
-                sh "trivy image --format table -o image.html ugogabriel/gab-blogging-app:latest"
+                sh "trivy image --format table -o image.html suhrid/blogging-app:latest"
             }
         }
         stage('Docker Push Image') {
             steps {
                 script{
                 withDockerRegistry(credentialsId: 'dockerhub-cred', url: 'https://index.docker.io/v1/') {
-                    sh "docker push ugogabriel/gab-blogging-app"
+                    sh "docker push suhrid/blogging-app"
                 }
                 }
             }
