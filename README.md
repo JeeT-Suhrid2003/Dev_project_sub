@@ -73,4 +73,4 @@ The goal is to provide a repeatable, automated workflow suitable for a course su
 └── README.md
 ```
 ---
-[!image.png]
+![image](image.png)
