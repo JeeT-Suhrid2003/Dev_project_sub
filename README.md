@@ -71,3 +71,6 @@ The goal is to provide a repeatable, automated workflow suitable for a course su
 │   ├── Dockerfile
 │   └── ...
 └── README.md
+```
+---
+[!imge.png]
